@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="module">
+  import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+
+  const widget = await Chatbox.initBubble({
+    agentId: 'cm496ilwk0jx72056csyujmqu',
+    
+    // optional 
+    // If provided will create a contact for the user and link it to the conversation
+    contact: {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'customer@email.com',
+      phoneNumber: '+33612345644',
+      userId: '42424242',
+    },
+    // optional
+    // Override initial messages
+    initialMessages: [
+      'Hello Georges how are you doing today?',
+      'How can I help you ?',
+    ],
+    // optional
+    // Provided context will be appended to the Agent system prompt
+    context: "The user you are talking to is John. Start by Greeting him by his name.",
+  });
+
+  // open the chat bubble
+  widget.open();
+
+  // close the chat bubble
+  widget.close()
+
+  // or 
+  widget.toggle()
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Our Coffee Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <img src="https://www.natalriograndedonorte.com/wp-content/uploads/2016/04/brazilian-coffee.jpg" alt="Espresso">
+                <div class="menu-content">
+                    <h3>Espresso</h3>
+                    <p>A strong and bold coffee.</p>
+                    <span>$2.50</span>
+                </div>
+                <div class="overlay">Espresso</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.forkinthekitchen.com/wp-content/uploads/2022/07/220629.iced_.latte_.vanilla-8882.jpg" alt="Latte">
+                <div class="menu-content">
+                    <h3>Latte</h3>
+                    <p>A smooth blend of espresso and steamed milk.</p>
+                    <span>$3.50</span>
+                </div>
+                <div class="overlay">Latte</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps37407_THE1213734_37407_WEB.jpg" alt="Cappuccino">
+                <div class="menu-content">
+                    <h3>Cappuccino</h3>
+                    <p>A rich coffee topped with frothy milk.</p>
+                    <span>$3.00</span>
+                </div>
+                <div class="overlay">Cappuccino</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://joyce.com.co/wp-content/uploads/2017/07/pan9-scaled.jpg" alt="Chocolate Croissant">
+                <div class="menu-content">
+                    <h3>Chocolate Croissant</h3>
+                    <p>A flaky pastry filled with rich chocolate.</p>
+                    <span>$2.00</span>
+                </div>
+                <div class="overlay">Chocolate Croissant</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.simplejoy.com/wp-content/uploads/2020/04/healthy-blueberry-muffins-__.jpg" alt="Blueberry Muffin">
+                <div class="menu-content">
+                    <h3>Blueberry Muffin</h3>
+                    <p>A soft muffin packed with juicy blueberries.</p>
+                    <span>$2.50</span>
+                </div>
+                <div class="overlay">Blueberry Muffin</div>
+            </div>
+         </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At our coffee shop, we believe in serving the best coffee made from high-quality beans. Our baristas are passionate about coffee and are here to provide you with an exceptional experience.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@coffeeshop.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Coffee Lane, Brewtown, CA 12345</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Coffee Shop. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
